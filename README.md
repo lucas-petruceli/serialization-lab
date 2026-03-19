@@ -30,6 +30,8 @@ A desvantagem dessa abordagem é justamente a rigidez que a torna segura: toda c
 
 ## Índice dos Labs
 
+Para facilitar o entendimento das diferenças de comportamento entre Gson e kotlinx-serialization, preparamos uma série de labs — pequenos scripts executáveis que demonstram lado a lado como cada lib se comporta nos cenários mais comuns (e nos mais traiçoeiros) da migração. Cada lab mostra o input JSON, o resultado do Gson, o resultado do kotlinx, e explica a diferença.
+
 | Lab | Tema | Problema |
 |-----|------|----------|
 | 1 | Campos com valor default | Gson ignora defaults do Kotlin e injeta null/zero da JVM em campos non-null quando o JSON traz `null` explícito |
@@ -82,7 +84,7 @@ Além do `@SerializedName` — que é seguro migrar — o Gson tem outras anota�
 - `TypeConverter` no Room que usa Gson internamente
 - Parse manual do `errorBody` no tratamento de erros do Retrofit — procurem por `errorBody()` no projeto e registrem os arquivos encontrados
 - Qualquer classe marcada com `abstract` ou `interface` sendo deserializada diretamente
-- Atenção no log dos labs apartir do 5, eles são os casos mais especificos, e não queremos lidar com eles por hora.
+- Atenção os Labs apartir do 6, são casos especificos e não queremos lidar com eles por hora.
 
 > Se encontrarem qualquer um desses casos, registrem o **arquivo**, a **linha** e o **padrão encontrado**. Isso vai alimentar a próxima fase da migração.
 
