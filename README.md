@@ -101,12 +101,6 @@ Para verificar o JDK:
 java -version
 ```
 
-Se não tiver o JDK 21, instale via [SDKMAN](https://sdkman.io/):
-
-```bash
-sdk install java 21.0.2-tem
-```
-
 ---
 
 ## Como rodar
